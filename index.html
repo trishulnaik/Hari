@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gruha Pravesh · DVS Shanker &amp; Family</title>
+  <meta name="description" content="You are warmly invited to our Gruha Pravesh ceremony on 21 November 2026, 9:51 PM, followed by Satyanarayana Swamy Vratham and lunch on 22 November." />
+  <meta property="og:title" content="Gruha Pravesh Ceremony · DVS Shanker & Family" />
+  <meta property="og:description" content="21 Nov 2026, 9:51 PM · Satyanarayana Swamy Vratham 22 Nov, 9:30 AM, followed by lunch" />
+  <meta name="theme-color" content="#8B0000" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#FDFBF7',
+            maroon: { DEFAULT: '#8B0000', 600: '#990000', 900: '#5c0000' },
+            gold: { DEFAULT: '#D4AF37', light: '#F1DC8A', dark: '#A8841F' },
+            leaf: { DEFAULT: '#2E5B2E', dark: '#1F3D1F', light: '#4F8A3F' },
+            marigold: '#F39C12',
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            playfair: ['"Playfair Display"', 'serif'],
+            script: ['"Great Vibes"', 'cursive'],
+            sans: ['Poppins', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root { --gold: #D4AF37; --maroon: #8B0000; }
+    body { background: #FDFBF7; overflow-x: hidden; }
+
+    /* Subtle paper / mandala texture */
+    .paper {
+      background-color: #FDFBF7;
+      background-image:
+        radial-gradient(circle at 20% 10%, rgba(212,175,55,.08) 0, transparent 40%),
+        radial-gradient(circle at 80% 60%, rgba(139,0,0,.05) 0, transparent 45%),
+        radial-gradient(circle at 50% 100%, rgba(46,91,46,.06) 0, transparent 40%);
+    }
+
+    .gold-text {
+      background: linear-gradient(90deg, #A8841F, #F1DC8A 45%, #D4AF37 55%, #A8841F);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+
+    .gold-frame {
+      position: relative;
+      border: 1px solid rgba(212,175,55,.65);
+      box-shadow: 0 0 0 6px #FDFBF7, 0 0 0 7px rgba(212,175,55,.45), 0 20px 50px -20px rgba(92,0,0,.35);
+    }
+    .gold-frame::before, .gold-frame::after {
+      content: '❖'; position: absolute; color: var(--gold); font-size: 18px; line-height: 1;
+      background: #FDFBF7; padding: 0 6px;
+    }
+    .gold-frame::before { top: -10px; left: 50%; transform: translateX(-50%); }
+    .gold-frame::after  { bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+    .divider { display:flex; align-items:center; gap:.75rem; color: var(--gold); }
+    .divider::before, .divider::after {
+      content:''; flex:1; height:1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .parallax-layer { will-change: transform; pointer-events: none; }
+
+    /* Toran swing */
+    @keyframes sway { 0%,100% { transform: rotate(-1.2deg); } 50% { transform: rotate(1.2deg); } }
+    .sway { transform-origin: top center; animation: sway 6s ease-in-out infinite; }
+
+    @keyframes glow { 0%,100% { opacity:.55; transform: scale(1);} 50% { opacity:1; transform: scale(1.08);} }
+    .diya-flame { transform-origin: bottom center; animation: glow 1.8s ease-in-out infinite; }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    .count-box { min-width: 4.25rem; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sway, .diya-flame { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    input, textarea { font-family: Poppins, system-ui, sans-serif; }
+    #qrcode img, #qrcode canvas { margin: 0 auto; }
+  </style>
+</head>
+
+<body class="paper font-sans text-[#3b2a1a] antialiased">
+
+  <!-- ===================== TORAN (fixed top garland) ===================== -->
+  <div class="fixed top-0 inset-x-0 z-40 pointer-events-none">
+    <svg id="toran" class="w-full h-[70px] sm:h-[90px] sway drop-shadow" preserveAspectRatio="none" aria-hidden="true"></svg>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-maroon/95 backdrop-blur text-ivory rounded-full shadow-xl px-2 py-1.5 flex gap-1 text-[11px] sm:text-xs font-medium tracking-wide border border-gold/60">
+    <a href="#home" class="px-3 py-2 rounded-full hover:bg-gold hover:text-maroon transition">Home</a>
+    <a href="#events" class="px-3 py-2 rounded-full hover:bg-gold hover:text-maroon transition">Events</a>
+    <a href="#venue" class="px-3 py-2 rounded-full hover:bg-gold hover:text-maroon transition">Venue</a>
+    <a href="#share" class="px-3 py-2 rounded-full hover:bg-gold hover:text-maroon transition">Share</a>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header id="home" class="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-24 pb-16 px-4">
+
+    <!-- Background botanical layer (slow) -->
+    <div class="parallax-layer absolute inset-0" data-speed="0.35" aria-hidden="true">
+      <svg class="absolute -left-14 sm:-left-16 top-24 w-28 sm:w-80 opacity-[.10] sm:opacity-[.18]" viewBox="0 0 200 400"><use href="#mango-branch"/></svg>
+      <svg class="absolute -right-14 sm:-right-16 top-56 w-28 sm:w-80 opacity-[.10] sm:opacity-[.18] -scale-x-100" viewBox="0 0 200 400"><use href="#mango-branch"/></svg>
+    </div>
+    <!-- Mandala layer (medium, opposite direction) -->
+    <div class="parallax-layer absolute inset-0 flex items-center justify-center" data-speed="-0.15" aria-hidden="true">
+      <svg class="w-[110vw] max-w-[900px] opacity-[.05] sm:opacity-[.07] text-gold" viewBox="0 0 200 200"><use href="#mandala"/></svg>
+    </div>
+    <!-- Floating petals (fast) -->
+    <div class="parallax-layer absolute inset-0 hidden sm:block" data-speed="0.6" aria-hidden="true">
+      <span class="absolute left-[12%] top-[30%] w-3 h-3 rounded-full bg-marigold/60"></span>
+      <span class="absolute left-[80%] top-[22%] w-2 h-2 rounded-full bg-gold/70"></span>
+      <span class="absolute left-[70%] top-[70%] w-3 h-3 rounded-full bg-maroon/30"></span>
+      <span class="absolute left-[22%] top-[78%] w-2 h-2 rounded-full bg-marigold/50"></span>
+      <span class="absolute left-[50%] top-[88%] w-2.5 h-2.5 rounded-full bg-gold/60"></span>
+    </div>
+
+    <!-- Foreground content -->
+    <div class="relative z-10 max-w-2xl w-full text-center reveal">
+      <p class="font-cinzel text-maroon tracking-[0.35em] text-xs sm:text-sm font-bold">॥ SHREE GANESHAYA NAMAH ॥</p>
+
+      <!-- Ganesha -->
+      <div class="mx-auto mt-5 w-28 h-28 sm:w-36 sm:h-36 rounded-full grid place-items-center bg-gradient-to-b from-[#fff7e0] to-ivory gold-frame">
+        <svg viewBox="0 0 120 120" class="w-20 h-20 sm:w-24 sm:h-24" role="img" aria-label="Lord Ganesha">
+          <use href="#ganesha"/>
+        </svg>
+      </div>
+
+      <p class="mt-8 font-playfair italic text-base sm:text-lg text-[#5a4630] leading-relaxed px-2">
+        With God's grace and the blessings of our elders,<br class="hidden sm:block" />
+        we are delighted to invite you to our
+      </p>
+
+      <h1 class="mt-4 font-script text-maroon text-6xl sm:text-8xl leading-tight drop-shadow-sm">Gruha Pravesh</h1>
+      <p class="font-cinzel text-gold-dark tracking-[0.4em] text-sm sm:text-base -mt-1"><span class="gold-text font-bold">CEREMONY</span></p>
+
+      <div class="divider my-7 max-w-xs mx-auto text-lg">✿</div>
+
+      <p class="font-playfair text-lg sm:text-xl text-maroon-900">Please join us with your family and<br class="sm:hidden" /> shower us with your blessings.</p>
+      <p class="mt-3 text-sm text-[#6b5640] italic">Kindly consider this as our personal invitation.</p>
+
+      <p class="mt-8 font-cinzel text-sm tracking-widest text-leaf-dark">— DVS SHANKER &amp; FAMILY —</p>
+
+      <a href="#events" class="mt-10 inline-flex flex-col items-center text-maroon/80 hover:text-maroon text-xs tracking-widest">
+        SCROLL
+        <svg class="w-5 h-5 mt-1 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== EVENTS & COUNTDOWN ===================== -->
+  <section id="events" class="relative py-24 px-4 overflow-hidden bg-gradient-to-b from-ivory via-[#fbf3e3] to-ivory">
+    <div class="parallax-layer absolute inset-0" data-speed="0.25" aria-hidden="true">
+      <svg class="absolute -right-16 sm:-right-10 top-10 w-32 sm:w-96 opacity-[.08] sm:opacity-[.14] rotate-12" viewBox="0 0 200 400"><use href="#mango-branch"/></svg>
+      <svg class="hidden sm:block absolute -left-20 bottom-0 w-96 opacity-[.12] -rotate-12 -scale-x-100" viewBox="0 0 200 400"><use href="#mango-branch"/></svg>
+    </div>
+    <div class="parallax-layer absolute inset-0 hidden sm:flex items-start justify-end" data-speed="-0.2" aria-hidden="true">
+      <svg class="w-80 sm:w-[520px] opacity-[.08] text-maroon mt-40 -mr-24" viewBox="0 0 200 200"><use href="#mandala"/></svg>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="text-center reveal">
+        <p class="font-cinzel tracking-[0.3em] text-xs text-leaf">AUSPICIOUS MOMENTS</p>
+        <h2 class="font-playfair text-3xl sm:text-5xl text-maroon mt-2">Celebrate With Us</h2>
+        <div class="divider my-5 max-w-xs mx-auto">❁</div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mt-10">
+        <!-- Event 1 -->
+        <article class="reveal gold-frame bg-white/80 backdrop-blur rounded-2xl p-7 sm:p-9 text-center">
+          <div class="mx-auto w-14 h-14 grid place-items-center rounded-full bg-maroon text-gold text-2xl shadow-lg">
+            <svg viewBox="0 0 64 64" class="w-9 h-9"><use href="#diya"/></svg>
+          </div>
+          <p class="mt-5 font-cinzel text-xs tracking-[0.3em] text-leaf">GRUHA PRAVESH</p>
+          <h3 class="font-playfair text-2xl text-maroon mt-1">House Warming</h3>
+          <div class="divider my-4 text-sm">✦</div>
+          <p class="font-cinzel text-4xl text-maroon-900">21</p>
+          <p class="font-cinzel tracking-widest text-sm text-[#6b5640]">NOVEMBER 2026 · SATURDAY</p>
+          <p class="mt-4 inline-block px-5 py-2 rounded-full bg-gold/15 border border-gold/50 text-maroon font-semibold">Muhurtham · 9:51 PM</p>
+        </article>
+
+        <!-- Event 2 -->
+        <article class="reveal gold-frame bg-white/80 backdrop-blur rounded-2xl p-7 sm:p-9 text-center">
+          <div class="mx-auto w-14 h-14 grid place-items-center rounded-full bg-leaf text-gold shadow-lg">
+            <svg viewBox="0 0 64 64" class="w-9 h-9"><use href="#kalash"/></svg>
+          </div>
+          <p class="mt-5 font-cinzel text-xs tracking-[0.3em] text-leaf">POOJA &amp; LUNCH</p>
+          <h3 class="font-playfair text-2xl text-maroon mt-1">Satyanarayana Swamy Vratham</h3>
+          <div class="divider my-4 text-sm">✦</div>
+          <p class="font-cinzel text-4xl text-maroon-900">22</p>
+          <p class="font-cinzel tracking-widest text-sm text-[#6b5640]">NOVEMBER 2026 · SUNDAY</p>
+          <div class="mt-4 flex flex-wrap justify-center gap-2">
+            <span class="px-4 py-2 rounded-full bg-gold/15 border border-gold/50 text-maroon font-semibold">Vratham · 9:30 AM</span>
+            <span class="px-4 py-2 rounded-full bg-leaf/10 border border-leaf/40 text-leaf-dark font-semibold">Lunch · 1:00 PM onwards</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="reveal text-center mt-8 font-playfair italic text-[#5a4630]">Hosted with love by <span class="not-italic font-semibold text-maroon">DVS Shanker &amp; Family</span></p>
+
+      <!-- Countdown -->
+      <div class="reveal mt-14 max-w-3xl mx-auto rounded-3xl bg-gradient-to-br from-maroon to-maroon-900 text-ivory p-7 sm:p-10 text-center shadow-2xl border border-gold/50 relative overflow-hidden">
+        <svg class="absolute -right-16 -top-16 w-64 opacity-10 text-gold" viewBox="0 0 200 200" aria-hidden="true"><use href="#mandala"/></svg>
+        <p class="font-cinzel text-xs tracking-[0.35em] text-gold-light">COUNTING DOWN TO THE MUHURTHAM</p>
+        <p id="cd-sub" class="text-sm text-ivory/80 mt-1">Saturday, 21 November 2026 · 9:51 PM IST</p>
+        <div id="countdown" class="mt-6 flex justify-center gap-2 sm:gap-4" aria-live="polite">
+          <div class="count-box rounded-xl bg-white/10 border border-gold/40 py-3 px-2"><div data-unit="d" class="font-cinzel text-3xl sm:text-5xl text-gold-light">00</div><div class="text-[10px] sm:text-xs tracking-widest mt-1">DAYS</div></div>
+          <div class="count-box rounded-xl bg-white/10 border border-gold/40 py-3 px-2"><div data-unit="h" class="font-cinzel text-3xl sm:text-5xl text-gold-light">00</div><div class="text-[10px] sm:text-xs tracking-widest mt-1">HOURS</div></div>
+          <div class="count-box rounded-xl bg-white/10 border border-gold/40 py-3 px-2"><div data-unit="m" class="font-cinzel text-3xl sm:text-5xl text-gold-light">00</div><div class="text-[10px] sm:text-xs tracking-widest mt-1">MINS</div></div>
+          <div class="count-box rounded-xl bg-white/10 border border-gold/40 py-3 px-2"><div data-unit="s" class="font-cinzel text-3xl sm:text-5xl text-gold-light">00</div><div class="text-[10px] sm:text-xs tracking-widest mt-1">SECS</div></div>
+        </div>
+        <p id="cd-done" class="hidden mt-6 font-script text-4xl text-gold-light">Shubh Gruha Pravesh!</p>
+        <a id="cal-btn" href="#" class="mt-7 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold text-maroon-900 font-semibold text-sm hover:bg-gold-light transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+          Add to Calendar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VENUE ===================== -->
+  <section id="venue" class="relative py-24 px-4 overflow-hidden">
+    <div class="parallax-layer absolute inset-0" data-speed="0.3" aria-hidden="true">
+      <svg class="absolute left-1/2 -translate-x-1/2 top-0 w-[120vw] sm:w-[700px] opacity-[.04] sm:opacity-[.06] text-leaf" viewBox="0 0 200 200"><use href="#mandala"/></svg>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="text-center reveal">
+        <p class="font-cinzel tracking-[0.3em] text-xs text-leaf">FIND YOUR WAY</p>
+        <h2 class="font-playfair text-3xl sm:text-5xl text-maroon mt-2">The Venue</h2>
+        <div class="divider my-5 max-w-xs mx-auto">❁</div>
+      </div>
+
+      <div class="reveal mt-10 gold-frame rounded-2xl bg-white/85 overflow-hidden grid md:grid-cols-5">
+        <div class="md:col-span-3 h-72 md:h-auto min-h-[300px] relative bg-[#efe6d2]">
+          <iframe
+            title="Venue location map"
+            src="https://maps.google.com/maps?q=17.410343,78.556168&t=k&z=18&output=embed"
+            class="absolute inset-0 w-full h-full border-0"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <div class="md:col-span-2 p-7 sm:p-9 flex flex-col justify-center text-center md:text-left">
+          <div class="w-12 h-12 rounded-full bg-maroon text-gold grid place-items-center mx-auto md:mx-0">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          </div>
+          <h3 class="font-playfair text-2xl text-maroon mt-4">Our New Home</h3>
+          <p class="text-sm text-[#6b5640] mt-2">Hyderabad, Telangana</p>
+          <p class="text-xs text-[#8a7458] mt-1 font-mono">17.410343° N, 78.556168° E</p>
+          <div class="divider my-5 text-sm">✦</div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=17.410343,78.556168" target="_blank" rel="noopener"
+             class="inline-flex justify-center items-center gap-2 px-6 py-3.5 rounded-full bg-maroon text-ivory font-semibold shadow-lg hover:bg-maroon-600 hover:shadow-xl transition border border-gold/60">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
+            Get Directions
+          </a>
+          <a href="https://maps.google.com/?q=17.410343,78.556168" target="_blank" rel="noopener" class="mt-3 text-sm text-leaf hover:text-leaf-dark underline underline-offset-4">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QR & SHARE ===================== -->
+  <section id="share" class="relative py-24 px-4 overflow-hidden bg-gradient-to-b from-ivory via-[#f7efe0] to-ivory">
+    <div class="parallax-layer absolute inset-0" data-speed="0.3" aria-hidden="true">
+      <svg class="absolute -left-16 sm:-left-14 top-20 w-28 sm:w-80 opacity-[.08] sm:opacity-[.15]" viewBox="0 0 200 400"><use href="#mango-branch"/></svg>
+      <svg class="hidden sm:block absolute -right-14 bottom-10 w-80 opacity-[.15] -scale-x-100 rotate-180" viewBox="0 0 200 400"><use href="#mango-branch"/></svg>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="text-center reveal">
+        <p class="font-cinzel tracking-[0.3em] text-xs text-leaf">STAY CONNECTED</p>
+        <h2 class="font-playfair text-3xl sm:text-5xl text-maroon mt-2">Scan &amp; Share</h2>
+        <div class="divider my-5 max-w-xs mx-auto">❁</div>
+      </div>
+
+      <div class="mt-10 max-w-md mx-auto">
+        <!-- QR -->
+        <div class="reveal gold-frame rounded-2xl bg-white/85 p-7 text-center flex flex-col items-center">
+                    <h3 class="font-playfair text-xl text-maroon mt-1">Venue QR Code</h3>
+          <div class="mt-5 p-4 rounded-xl bg-ivory border-2 border-dashed border-gold/70">
+            <div id="qrcode" class="w-[180px] h-[180px] grid place-items-center text-xs text-[#8a7458]">Loading QR…</div>
+          </div>
+          <p class="mt-4 text-sm text-[#6b5640] leading-relaxed">Scan to open the venue location on your phone. Share it with family members joining you.</p>
+          <button id="share-btn" class="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-maroon text-maroon text-sm font-semibold hover:bg-maroon hover:text-ivory transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+            Share Invitation
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="relative pt-16 pb-28 px-4 text-center bg-maroon-900 text-ivory overflow-hidden">
+    <svg class="absolute left-1/2 -translate-x-1/2 -top-24 w-[520px] opacity-10 text-gold" viewBox="0 0 200 200" aria-hidden="true"><use href="#mandala"/></svg>
+    <div class="relative">
+      <svg viewBox="0 0 64 64" class="w-12 h-12 mx-auto text-gold"><use href="#diya"/></svg>
+      <p class="font-script text-4xl sm:text-5xl text-gold-light mt-3">With love &amp; gratitude</p>
+      <p class="font-cinzel tracking-[0.3em] text-sm mt-3">DVS SHANKER &amp; FAMILY</p>
+      <p class="text-xs text-ivory/60 mt-6">Your presence is our greatest blessing.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== SVG SYMBOL LIBRARY ===================== -->
+  <svg width="0" height="0" class="absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#F1DC8A"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#A8841F"/>
+      </linearGradient>
+      <radialGradient id="g-marigold" cx=".4" cy=".35" r=".7">
+        <stop offset="0" stop-color="#FFD54F"/><stop offset=".6" stop-color="#F39C12"/><stop offset="1" stop-color="#D35400"/>
+      </radialGradient>
+      <radialGradient id="g-marigold2" cx=".4" cy=".35" r=".7">
+        <stop offset="0" stop-color="#FFF176"/><stop offset=".6" stop-color="#FBC02D"/><stop offset="1" stop-color="#E69500"/>
+      </radialGradient>
+    </defs>
+
+    <!-- Minimal Ganesha line-art -->
+    <symbol id="ganesha" viewBox="0 0 120 120">
+      <g fill="none" stroke="#8B0000" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- crown -->
+        <path d="M44 30 L50 16 L56 24 L60 10 L64 24 L70 16 L76 30 Z" fill="url(#g-gold)" stroke="#A8841F" stroke-width="2"/>
+        <!-- head -->
+        <path d="M42 32 Q60 26 78 32 Q84 44 78 56 Q70 64 66 66"/>
+        <path d="M42 32 Q36 44 42 56 Q50 64 54 66"/>
+        <!-- ears -->
+        <path d="M42 36 Q22 30 18 46 Q16 62 34 66 Q40 62 42 54"/>
+        <path d="M78 36 Q98 30 102 46 Q104 62 86 66 Q80 62 78 54"/>
+        <!-- trunk -->
+        <path d="M54 66 Q56 82 52 92 Q48 102 38 100 Q32 98 34 92"/>
+        <path d="M66 66 Q66 84 60 96 Q54 108 40 106 Q30 104 34 92"/>
+        <!-- tusk -->
+        <path d="M68 68 L76 78" stroke="#D4AF37" stroke-width="4"/>
+        <!-- eyes -->
+        <path d="M50 46 q3 -3 6 0 M64 46 q3 -3 6 0" stroke-width="2.6"/>
+      </g>
+      <!-- tilak -->
+      <path d="M60 33 l-3 7 h6 z" fill="#D4AF37"/>
+      <circle cx="60" cy="42" r="2.2" fill="#C0392B"/>
+    </symbol>
+
+    <!-- Mango branch -->
+    <symbol id="mango-branch" viewBox="0 0 200 400">
+      <path d="M100 0 C 95 120, 110 250, 95 400" stroke="#1F3D1F" stroke-width="3" fill="none"/>
+      <g fill="#2E5B2E">
+        <path d="M100 40 C 60 30, 30 50, 20 80 C 55 80, 85 65, 100 40Z"/>
+        <path d="M100 70 C 140 60, 170 80, 180 110 C 145 110, 115 95, 100 70Z" fill="#4F8A3F"/>
+        <path d="M101 120 C 61 110, 31 130, 21 160 C 56 160, 86 145, 101 120Z" fill="#4F8A3F"/>
+        <path d="M102 160 C 142 150, 172 170, 182 200 C 147 200, 117 185, 102 160Z"/>
+        <path d="M103 210 C 63 200, 33 220, 23 250 C 58 250, 88 235, 103 210Z"/>
+        <path d="M102 250 C 142 240, 172 260, 182 290 C 147 290, 117 275, 102 250Z" fill="#4F8A3F"/>
+        <path d="M99 300 C 59 290, 29 310, 19 340 C 54 340, 84 325, 99 300Z" fill="#4F8A3F"/>
+        <path d="M97 340 C 137 330, 167 350, 177 380 C 142 380, 112 365, 97 340Z"/>
+      </g>
+    </symbol>
+
+    <!-- Mandala -->
+    <symbol id="mandala" viewBox="0 0 200 200">
+      <g fill="none" stroke="currentColor" stroke-width="1.2">
+        <circle cx="100" cy="100" r="95"/><circle cx="100" cy="100" r="80"/><circle cx="100" cy="100" r="40"/><circle cx="100" cy="100" r="18"/>
+        <g id="petal-ring">
+          <path d="M100 20 C 112 40, 112 55, 100 62 C 88 55, 88 40, 100 20Z"/>
+          <path d="M100 20 C 112 40, 112 55, 100 62 C 88 55, 88 40, 100 20Z" transform="rotate(30 100 100)"/>
+          <path d="M100 20 C 112 40, 112 55, 100 62 C 88 55, 88 40, 100 20Z" transform="rotate(60 100 100)"/>
+          <path d="M100 20 C 112 40, 112 55, 100 62 C 88 55, 88 40, 100 20Z" transform="rotate(90 100 100)"/>
+          <path d="M100 20 C 112 40, 112 55, 100 62 C 88 55, 88 40, 100 20Z" transform="rotate(120 100 100)"/>
+          <path d="M100 20 C 112 40, 112 55, 100 62 C 88 55, 88 40, 100 20Z" transform="rotate(150 100 100)"/>
+        </g>
+        <use href="#petal-ring" transform="rotate(180 100 100)"/>
+        <g>
+          <path d="M100 60 L108 82 L100 100 L92 82Z"/>
+          <path d="M100 60 L108 82 L100 100 L92 82Z" transform="rotate(45 100 100)"/>
+          <path d="M100 60 L108 82 L100 100 L92 82Z" transform="rotate(90 100 100)"/>
+          <path d="M100 60 L108 82 L100 100 L92 82Z" transform="rotate(135 100 100)"/>
+          <path d="M100 60 L108 82 L100 100 L92 82Z" transform="rotate(180 100 100)"/>
+          <path d="M100 60 L108 82 L100 100 L92 82Z" transform="rotate(225 100 100)"/>
+          <path d="M100 60 L108 82 L100 100 L92 82Z" transform="rotate(270 100 100)"/>
+          <path d="M100 60 L108 82 L100 100 L92 82Z" transform="rotate(315 100 100)"/>
+        </g>
+      </g>
+    </symbol>
+
+    <!-- Diya -->
+    <symbol id="diya" viewBox="0 0 64 64">
+      <path class="diya-flame" d="M32 8 C 38 18, 38 26, 32 30 C 26 26, 26 18, 32 8Z" fill="#FFB300"/>
+      <path d="M32 16 C 35 22, 35 26, 32 28 C 29 26, 29 22, 32 16Z" fill="#FFF3C4"/>
+      <path d="M8 36 Q32 32 56 36 Q52 52 32 54 Q12 52 8 36Z" fill="url(#g-gold)"/>
+      <path d="M8 36 Q32 40 56 36" stroke="#A8841F" stroke-width="1.5" fill="none"/>
+    </symbol>
+
+    <!-- Kalash -->
+    <symbol id="kalash" viewBox="0 0 64 64">
+      <path d="M22 14 C 18 8, 26 4, 32 10 C 38 4, 46 8, 42 14" fill="#4F8A3F" stroke="#D4AF37" stroke-width="1"/>
+      <circle cx="32" cy="16" r="6" fill="#D35400"/>
+      <rect x="24" y="22" width="16" height="4" rx="1.5" fill="url(#g-gold)"/>
+      <path d="M24 26 C 10 32, 10 52, 32 56 C 54 52, 54 32, 40 26Z" fill="url(#g-gold)"/>
+      <path d="M18 40 H46" stroke="#8B0000" stroke-width="2"/>
+      <circle cx="32" cy="46" r="2.5" fill="#8B0000"/>
+    </symbol>
+  </svg>
+
+  <!-- QR library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+
+  <script>
+  (() => {
+    const MAP_URL = 'https://maps.google.com/?q=17.410343,78.556168';
+    const TARGET = new Date('2026-11-21T21:51:00+05:30').getTime();
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---------- Toran (marigold garland with mango leaves) ---------- */
+    function drawToran() {
+      const svg = document.getElementById('toran');
+      const W = Math.max(window.innerWidth, 320);
+      const H = 90;
+      svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+      const NS = 'http://www.w3.org/2000/svg';
+      const parts = [];
+      // gold rope
+      parts.push(`<rect x="0" y="0" width="${W}" height="6" fill="url(#g-gold)"/>`);
+      const swags = Math.max(3, Math.round(W / 220));
+      const sw = W / swags;
+      for (let i = 0; i < swags; i++) {
+        const x0 = i * sw, x1 = x0 + sw, cx = x0 + sw / 2;
+        // flowers along a quadratic curve
+        const n = 14;
+        for (let k = 0; k <= n; k++) {
+          const t = k / n;
+          const x = (1 - t) * (1 - t) * x0 + 2 * (1 - t) * t * cx + t * t * x1;
+          const y = (1 - t) * (1 - t) * 6 + 2 * (1 - t) * t * 58 + t * t * 6;
+          const grad = k % 2 ? 'g-marigold' : 'g-marigold2';
+          parts.push(`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="7" fill="url(#${grad})"/>`);
+          parts.push(`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2" fill="#B34700" opacity=".6"/>`);
+        }
+        // hanging mango leaf + bell at swag join
+        parts.push(`<path d="M${x0} 4 c -7 14, -7 30, 0 44 c 7 -14, 7 -30, 0 -44z" fill="#2E5B2E"/>`);
+        parts.push(`<path d="M${x0} 6 v 36" stroke="#1F3D1F" stroke-width="1"/>`);
+        // center tassel
+        parts.push(`<line x1="${cx}" y1="64" x2="${cx}" y2="74" stroke="#D4AF37" stroke-width="1.5"/>`);
+        parts.push(`<circle cx="${cx}" cy="78" r="4.5" fill="url(#g-gold)"/>`);
+      }
+      parts.push(`<path d="M${W} 4 c -7 14, -7 30, 0 44 c 7 -14, 7 -30, 0 -44z" fill="#2E5B2E"/>`);
+      svg.innerHTML = parts.join('');
+    }
+    drawToran();
+    let rT; window.addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(drawToran, 150); });
+
+    /* ---------- Parallax ---------- */
+    const layers = [...document.querySelectorAll('.parallax-layer')];
+    let ticking = false;
+    function parallax() {
+      const vh = window.innerHeight;
+      for (const el of layers) {
+        const section = el.parentElement;
+        const rect = section.getBoundingClientRect();
+        if (rect.bottom < -200 || rect.top > vh + 200) continue;
+        const speed = (parseFloat(el.dataset.speed) || 0) * (window.innerWidth < 640 ? 0.4 : 1);
+        const offset = (rect.top + rect.height / 2 - vh / 2) * speed * -1;
+        el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+      }
+      ticking = false;
+    }
+    if (!reduceMotion) {
+      window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(parallax); ticking = true; } }, { passive: true });
+      window.addEventListener('resize', parallax);
+      parallax();
+    }
+
+    /* ---------- Reveal on scroll ---------- */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* ---------- Countdown ---------- */
+    const units = {
+      d: document.querySelector('[data-unit="d"]'),
+      h: document.querySelector('[data-unit="h"]'),
+      m: document.querySelector('[data-unit="m"]'),
+      s: document.querySelector('[data-unit="s"]'),
+    };
+    const pad = n => String(n).padStart(2, '0');
+    let cdTimer;
+    function tick() {
+      let diff = TARGET - Date.now();
+      if (diff <= 0) {
+        clearInterval(cdTimer);
+        document.getElementById('countdown').classList.add('hidden');
+        document.getElementById('cd-done').classList.remove('hidden');
+        return;
+      }
+      const d = Math.floor(diff / 864e5); diff -= d * 864e5;
+      const h = Math.floor(diff / 36e5);  diff -= h * 36e5;
+      const m = Math.floor(diff / 6e4);   diff -= m * 6e4;
+      const s = Math.floor(diff / 1e3);
+      units.d.textContent = pad(d); units.h.textContent = pad(h);
+      units.m.textContent = pad(m); units.s.textContent = pad(s);
+    }
+    tick(); cdTimer = setInterval(tick, 1000);
+
+    /* ---------- Add to Calendar (Google Calendar) ---------- */
+    const calParams = new URLSearchParams({
+      action: 'TEMPLATE',
+      text: 'Gruha Pravesh – DVS Shanker & Family',
+      dates: '20261121T162100Z/20261122T090000Z',
+      details: 'Gruha Pravesh: 21 Nov 2026, 9:51 PM IST\nSatyanarayana Swamy Vratham: 22 Nov, 9:30 AM, followed by lunch\nDirections: ' + MAP_URL,
+      location: '17.410343,78.556168',
+    });
+    document.getElementById('cal-btn').href = 'https://calendar.google.com/calendar/render?' + calParams;
+    document.getElementById('cal-btn').target = '_blank';
+
+    /* ---------- QR code ---------- */
+    window.addEventListener('load', () => {
+      const box = document.getElementById('qrcode');
+      if (window.QRCode) {
+        box.textContent = '';
+        new QRCode(box, { text: MAP_URL, width: 180, height: 180, colorDark: '#5c0000', colorLight: '#FDFBF7', correctLevel: QRCode.CorrectLevel.M });
+      } else {
+        box.textContent = 'QR unavailable offline';
+      }
+    });
+
+    /* ---------- Share ---------- */
+    document.getElementById('share-btn').addEventListener('click', async () => {
+      const shareData = {
+        title: 'Gruha Pravesh – DVS Shanker & Family',
+        text: 'You are invited to our Gruha Pravesh on 21 Nov 2026, 9:51 PM, and Satyanarayana Swamy Vratham on 22 Nov, 9:30 AM, followed by lunch.',
+        url: location.href.startsWith('http') ? location.href : MAP_URL,
+      };
+      try {
+        if (navigator.share) await navigator.share(shareData);
+        else { await navigator.clipboard.writeText(shareData.text + ' ' + shareData.url); alert('Invitation link copied!'); }
+      } catch (_) {}
+    });
+
+  })();
+  </script>
+</body>
+</html>
